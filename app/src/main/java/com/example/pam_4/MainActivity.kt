@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonAddItem.setOnClickListener {
             val name = binding.editTextName.text.toString()
-            val description = binding.editTextNim.text.toString()
+            val nim = binding.editTextNim.text.toString()
 
-            if (name.isNotEmpty() && description.isNotEmpty()) {
-                val newItem = StudentModel(R.drawable.ic_launcher_foreground, name, description)
+            if (name.isNotEmpty() && nim.isNotEmpty()) {
+                val newItem = StudentModel(R.drawable.ic_launcher_foreground, name, nim)
                 itemList.add(0, newItem)
                 itemAdapter.notifyDataSetChanged()
 

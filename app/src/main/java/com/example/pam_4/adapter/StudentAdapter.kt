@@ -14,7 +14,7 @@ class StudentAdapter(private val itemList: List<StudentModel>) : RecyclerView.Ad
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.studentImage)
         val nameTextView: TextView = itemView.findViewById(R.id.studentName)
-        val descriptionTextView: TextView = itemView.findViewById(R.id.studentNim)
+        val nimTextView: TextView = itemView.findViewById(R.id.studentNim)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -26,7 +26,7 @@ class StudentAdapter(private val itemList: List<StudentModel>) : RecyclerView.Ad
         val item = itemList[position]
         holder.imageView.setImageResource(item.image)
         holder.nameTextView.text = item.name
-        holder.descriptionTextView.text = item.nim
+        holder.nimTextView.text = item.nim
     }
 
     override fun getItemCount(): Int {
